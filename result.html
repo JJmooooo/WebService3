@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/static/key.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nouns {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Classification Result</h1>
+        <div class="nouns">
+            <label>Nouns:</label>
+            <ul>
+                {% for noun in nouns %}
+                <li>{{ noun }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="result">
+            <p>{{ result }}</p>
+        </div>
+    </div>
+</body>
+</html>
